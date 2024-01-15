@@ -41,47 +41,47 @@ test_devine()
 
 # Turing test
 
-# Test Unitaire
+Test Unitaire
 
 # decomposer
 assert decomposer(345) == (3, 4, 5)
 
-# Nombre en dehors de la plage attendue
+Nombre en dehors de la plage attendue
 assert decomposer(1000) == None
 
-# Nombre en dehors de la plage attendue
+Nombre en dehors de la plage attendue
 assert decomposer(99) == None
 
 # somme
 assert somme(1, 2, 3) == True
 
-# Nombre en dehors de la plage attendue
+Nombre en dehors de la plage attendue
 assert somme(10, 2, 3) == None
 
-# Condition de somme non satisfaite
+Condition de somme non satisfaite
 assert somme(1, 2, 4) == False
 
-#  Nombre divisible par 9
+Nombre divisible par 9
 assert divisible(81) == True
 
-# Nombre non divisible par 9
+Nombre non divisible par 9
 assert divisible(7) == False
 
-# Nombre négatif divisible par 9
+Nombre négatif divisible par 9
 assert divisible(-45) == True
 
 # devine
 
-# Le résultat doit être un nombre entre 100 et 999
+Le résultat doit être un nombre entre 100 et 999
 result = devine()
 assert 100 <= result <= 999
 
-# Les chiffres du nombre doivent satisfaire les conditions de somme et de divisibilité
+Les chiffres du nombre doivent satisfaire les conditions de somme et de divisibilité
 (c, d, u) = decomposer(result)
 assert somme(c, d, u) == True
 assert divisible(result) == True
 
-# Test
+Test
 import unittest
 
 class TestFunctions(unittest.TestCase):
@@ -101,7 +101,6 @@ class TestFunctions(unittest.TestCase):
         self.assertFalse(divisible(7))
         self.assertTrue(divisible(-45))
 
-    # Ajoutez des tests pour la fonction devine ici
 
 if __name__ == '__main__':
     unittest.main()
